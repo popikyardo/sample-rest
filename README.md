@@ -81,7 +81,7 @@ Server: Jetty(8.1.15.v20140411)
 {"id":1,"title":"Modified First Article","author":"Author","text":"Very long text"}
 ```
 
-`/topics/{topic_id}/articles/{article_id}` - shows an article by id
+GET `/topics/{topic_id}/articles/{article_id}` - shows an article by id
 ```
 curl -i -X GET http://localhost:8080/topics/1/articles/1
 
@@ -93,7 +93,7 @@ Server: Jetty(8.1.15.v20140411)
 {"id":1,"title":"Modified First Article","author":"Author","text":"Very long text"}
 ```
 
-`/topics/{topic_id}/articles` - lists all articles for topic
+GET `/topics/{topic_id}/articles` - lists all articles for topic
 ```
 curl -i -X GET http://localhost:8080/topics/1/articles
 
@@ -105,9 +105,9 @@ Server: Jetty(8.1.15.v20140411)
 [{"id":1,"title":"Modified First Article","author":"Author","text":"Very long text"}]
 ```
 
-`/article/delete` - deletes an article by its id
+DELETE `/topics/{topic_id}/articles/{article_id}` - deletes an article by its id
 ```
-curl -i -X GET http://localhost:8080/article/delete?id=1
+curl -i -X DELETE http://localhost:8080/topics/1/articles/1
 HTTP/1.1 200 OK
 Content-Type: text/plain;charset=ISO-8859-1
 Content-Length: 28
